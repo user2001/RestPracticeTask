@@ -1,0 +1,17 @@
+<html>
+<body>
+BookId: <input id="bookId" value="1"/>
+
+<button onclick="run('/books')">
+    Etag
+</button>
+<script>
+    async function run(uri) {
+        const bookId = document.getElementById('bookId').value;
+        const response = await fetch(uri + '/' + bookId);
+        const book = await response.json();
+        console.log(book);
+    }
+</script>
+</body>
+</html>
