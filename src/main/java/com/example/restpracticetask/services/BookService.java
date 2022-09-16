@@ -62,7 +62,7 @@ public class BookService implements BookServiceInt {
         return "Book with id: "+ bookId+ " was deleted";
     }
 
-    public void isFound(Long bookId) {
+    private void isFound(Long bookId) {
         boolean isExist = bookRepository.existsById(bookId);
         if (!isExist) {
             throw new BookNotFoundException(
