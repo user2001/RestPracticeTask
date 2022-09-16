@@ -4,7 +4,7 @@ import com.example.restpracticetask.entity.Book;
 
 import java.util.List;
 
-public interface BookServiceInterface {
+public interface BookServiceInt {
     public List<Book> getBooks();
     public Book getBookById(Long bookId);
     public Book addBook(Book book);
